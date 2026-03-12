@@ -29,3 +29,6 @@ jobs:
         with:
           name: semgrep-report
           path: semgrep-results.json
+
+      - name: Ejecutar análisis con reglas personalizadas
+        run: semgrep --config=semgrep-rules.yaml --json --output=semgrep-results.json
